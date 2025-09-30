@@ -9,6 +9,7 @@ namespace Lab_Activity_9_Github_Contribution
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private SpriteBatch dasd;
         int room = 5;
         private string IDUM = "Niggar";
         public Game1()
@@ -16,6 +17,7 @@ namespace Lab_Activity_9_Github_Contribution
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            
         }
 
         protected override void Initialize()
