@@ -11,7 +11,11 @@ namespace Lab_Activity_9_Github_Contribution
         private SpriteBatch _spriteBatch;
         private SpriteBatch dasd;
         int room = 5;
+
+        Vector2 _position = Vector2.Zero;
+
         private string IDUM = "Niggar";
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
