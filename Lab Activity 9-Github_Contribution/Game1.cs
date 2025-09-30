@@ -1,20 +1,27 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System.Diagnostics;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 namespace Lab_Activity_9_Github_Contribution
-{
+{       
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private SpriteBatch dasd;
         int room = 5;
+
         Vector2 _position = Vector2.Zero;
+
+        private string IDUM = "Niggar";
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            
         }
 
         protected override void Initialize()
@@ -35,8 +42,9 @@ namespace Lab_Activity_9_Github_Contribution
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
+            Atcion(IDUM);
             // TODO: Add your update logic here
+            Action(IDUM);
 
             base.Update(gameTime);
         }
@@ -48,6 +56,10 @@ namespace Lab_Activity_9_Github_Contribution
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
+        }
+        public void Atcion(string D)
+        {
+            Debug.WriteLine($"{D} have a gun!!!");
         }
     }
 }
