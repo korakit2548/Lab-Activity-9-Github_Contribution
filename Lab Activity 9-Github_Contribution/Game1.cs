@@ -8,6 +8,7 @@ namespace Lab_Activity_9_Github_Contribution
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private SpriteBatch _spriteBatch2;
         int room = 5;
         public Game1()
         {
