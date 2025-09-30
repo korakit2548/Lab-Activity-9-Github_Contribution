@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 namespace Lab_Activity_9_Github_Contribution
-{
+{       
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
@@ -38,6 +38,7 @@ namespace Lab_Activity_9_Github_Contribution
                 Exit();
             Atcion(IDUM);
             // TODO: Add your update logic here
+            Action(IDUM);
 
             base.Update(gameTime);
         }
@@ -54,6 +55,5 @@ namespace Lab_Activity_9_Github_Contribution
         {
             Debug.WriteLine($"{D} have a gun!!!");
         }
-
     }
 }
