@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System.Diagnostics;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -9,6 +10,7 @@ namespace Lab_Activity_9_Github_Contribution
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         int room = 5;
+        private string IDUM = "Niggar";
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -34,7 +36,7 @@ namespace Lab_Activity_9_Github_Contribution
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
+            Atcion(IDUM);
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -48,5 +50,10 @@ namespace Lab_Activity_9_Github_Contribution
 
             base.Draw(gameTime);
         }
+        public void Atcion(string D)
+        {
+            Debug.WriteLine($"{D} have a gun!!!");
+        }
+
     }
 }
