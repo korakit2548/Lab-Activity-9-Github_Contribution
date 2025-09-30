@@ -1,14 +1,15 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System.Diagnostics;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 namespace Lab_Activity_9_Github_Contribution
-{
+{       
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        int room = 5;
+        private string IDUM = "Niggar";
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -36,6 +37,7 @@ namespace Lab_Activity_9_Github_Contribution
                 Exit();
 
             // TODO: Add your update logic here
+            Action(IDUM);
 
             base.Update(gameTime);
         }
@@ -47,6 +49,10 @@ namespace Lab_Activity_9_Github_Contribution
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
+        }
+        public void Action(string IDUM)
+        {
+            Debug.WriteLine($"{ IDUM } have a gun!!!");
         }
     }
 }
